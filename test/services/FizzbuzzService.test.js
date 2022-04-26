@@ -1,4 +1,4 @@
-const FizzbuzzService = require("./../lib/services/FizzbuzzService");
+const FizzbuzzService = require("./../../lib/services/FizzbuzzService");
 
 describe("Unit Tests for FizzbuzzService class", () => {
   test("Test applyValidationInExplorer() method", () => {
