@@ -41,4 +41,21 @@ describe("Unit Tests for ExplorerController class", () => {
     expect(filteredExplorersUsernames).not.toBeUndefined();
     expect(filteredExplorersUsernames.join()).toBe(expectedList.join());
   });
+  
+  test("Test applyValidationInNumber() method", () => {
+    const numbersToValidate = [1, 3, 5, 15, 20, 23, 30, 33];
+
+    const fizzbuzzList = numbersToValidate.map((number) =>
+      ExplorerController.applyValidationInNumber(number)
+    );
+
+    expect(fizzbuzzList[0]).toBe(numbersToValidate[0]);
+    expect(fizzbuzzList[1]).toBe("FIZZ");
+    expect(fizzbuzzList[2]).toBe("BUZZ");
+    expect(fizzbuzzList[3]).toBe("FIZZBUZZ");
+    expect(fizzbuzzList[4]).toBe("BUZZ");
+    expect(fizzbuzzList[5]).toBe(numbersToValidate[5]);
+    expect(fizzbuzzList[6]).toBe("FIZZBUZZ");
+    expect(fizzbuzzList[7]).toBe("FIZZ");
+  });
 });
