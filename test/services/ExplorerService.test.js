@@ -28,14 +28,14 @@ describe("Unit Tests for ExplorerService class", () => {
     ).length;
 
     expect(filteredExplorersAmount).toBe(explorersFromNodeAmount);
-    expect(filteredExplorersAmount).toBe(10); // Current amount, in case of adding more explorers from the "node" mission update/delete
+    expect(filteredExplorersAmount).toBe(10);
   });
 
   test("Test getExplorersUsernameByMission() method", () => {
     const explorers = Reader.readJsonFile("explorers.json");
     const mission = "node";
     const filteredExplorersUsernames =
-      ExplorerService.getExplorersUsernameByMission(explorers, mission);
+      ExplorerService.getExplorersUsernamesByMission(explorers, mission);
 
     const expectedList = [
       "ajolonauta1",
