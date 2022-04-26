@@ -53,4 +53,17 @@ describe("Unit Tests for ExplorerService class", () => {
     expect(filteredExplorersUsernames).not.toBeUndefined();
     expect(filteredExplorersUsernames.join()).toBe(expectedList.join());
   });
+
+  test("Test filterByStack() method", () => {
+    const explorers = Reader.readJsonFile("explorers.json");
+    const stack = "javascript";
+    const filteredExplorers = ExplorerService.filterByStack(explorers, stack);
+
+    const haveJavascriptStack = filteredExplorers.every((explorer) =>
+      explorer.stacks.includes(stack)
+    );
+
+    expect(haveJavascriptStack).toBeTruthy();
+    expect(filteredExplorers.length).toBe(11);
+  });
 });

@@ -58,4 +58,16 @@ describe("Unit Tests for ExplorerController class", () => {
     expect(fizzbuzzList[6]).toBe("FIZZBUZZ");
     expect(fizzbuzzList[7]).toBe("FIZZ");
   });
+
+  test("Test getExplorersByStack() method", () => {
+    const stack = "javascript";
+    const filteredExplorers = ExplorerController.getExplorersByStack(stack);
+
+    const haveJavascriptStack = filteredExplorers.every((explorer) =>
+      explorer.stacks.includes(stack)
+    );
+
+    expect(haveJavascriptStack).toBeTruthy();
+    expect(filteredExplorers.length).toBe(11);
+  });
 });
