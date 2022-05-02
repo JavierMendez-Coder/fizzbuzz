@@ -41,7 +41,7 @@ describe("Unit Tests for ExplorerController class", () => {
     expect(filteredExplorersUsernames).not.toBeUndefined();
     expect(filteredExplorersUsernames.join()).toBe(expectedList.join());
   });
-  
+
   test("Test applyValidationInNumber() method", () => {
     const numbersToValidate = [1, 3, 5, 15, 20, 23, 30, 33];
 
@@ -69,5 +69,27 @@ describe("Unit Tests for ExplorerController class", () => {
 
     expect(haveJavascriptStack).toBeTruthy();
     expect(filteredExplorers.length).toBe(11);
+  });
+
+  test("Test getStringOfExplorersUsernameByMission() method", () => {
+    const mission = "node";
+    const stringOfFilteredExplorersUsernames =
+      ExplorerController.getStringOfExplorersUsernamesByMission(mission);
+
+    const expectedString = [
+      "ajolonauta1",
+      "ajolonauta2",
+      "ajolonauta3",
+      "ajolonauta4",
+      "ajolonauta5",
+      "ajolonauta11",
+      "ajolonauta12",
+      "ajolonauta13",
+      "ajolonauta14",
+      "ajolonauta15",
+    ].join(", ");
+
+    expect(stringOfFilteredExplorersUsernames).not.toBeUndefined();
+    expect(stringOfFilteredExplorersUsernames).toBe(expectedString);
   });
 });

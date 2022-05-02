@@ -66,4 +66,27 @@ describe("Unit Tests for ExplorerService class", () => {
     expect(haveJavascriptStack).toBeTruthy();
     expect(filteredExplorers.length).toBe(11);
   });
+
+  test("Test getStringOfExplorersUsernameByMission() method", () => {
+    const explorers = Reader.readJsonFile("explorers.json");
+    const mission = "node";
+    const stringOfFilteredExplorersUsernames =
+      ExplorerService.getStringOfExplorersUsernamesByMission(explorers, mission);
+
+    const expectedString = [
+      "ajolonauta1",
+      "ajolonauta2",
+      "ajolonauta3",
+      "ajolonauta4",
+      "ajolonauta5",
+      "ajolonauta11",
+      "ajolonauta12",
+      "ajolonauta13",
+      "ajolonauta14",
+      "ajolonauta15",
+    ].join(", ");
+
+    expect(stringOfFilteredExplorersUsernames).not.toBeUndefined();
+    expect(stringOfFilteredExplorersUsernames).toBe(expectedString);
+  });
 });
