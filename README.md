@@ -52,6 +52,7 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
+        <li><a href="#run-app">run-app</a></li>
         <li><a href="#http-requests-examples">HTTP Requests examples</a></li>
       </ul>
     </li>
@@ -126,7 +127,7 @@ In case you want to use the Telegram bot you will need to create one on your own
   TOKEN="YOUR-TOKEN-HERE"
   ```
 
-### Run programs
+### Run app
 
 * Server
   ```sh
