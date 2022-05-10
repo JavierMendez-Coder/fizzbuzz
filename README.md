@@ -52,8 +52,8 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <li><a href="#run-app">run-app</a></li>
-        <li><a href="#http-requests-examples">HTTP Requests examples</a></li>
+        <li><a href="#run-app">Run App</a></li>
+        <li><a href="#http-requests-examples">HTTP Requests Examples</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -120,14 +120,14 @@ To get a local copy up and running follow these simple steps.
 
 This API allows you to access to a "explorers" (basically the way the instructors refer to us) list from the [explorers.json][explorers.json] file. You can access it via browser or API platforms like [Postman][postman].
 
-In case you want to use the Telegram bot you will need to create one on your own talking to the [@BotFather][botfather] in the app, and add the given token to an `.env` file in the root directory.
+In case you want to use the Telegram bot you will need to create one on your own talking to the [BotFather][botfather] in the app, and add the given token to an `.env` file in the root directory.
 
 * .env
   ```
   TOKEN="YOUR-TOKEN-HERE"
   ```
 
-### Run app
+### Run App
 
 * Server
   ```sh
@@ -139,7 +139,7 @@ In case you want to use the Telegram bot you will need to create one on your own
   npm run bot
   ```
 
-### HTTP Requests examples
+### HTTP Requests Examples
 
 * Obtain the explorers list by mission
   ```
